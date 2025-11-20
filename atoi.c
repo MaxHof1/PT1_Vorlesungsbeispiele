@@ -11,12 +11,7 @@ int myatoi(const char s[])
     {
         n = n * 10; // Die aktuelle Zahl um eine Dezimalstelle nach links verschieben, damit die neue Ziffer die letzte Null ersetzen kann. 
         n += s[i]-'0';
-        
     }
-
-
-
-
     return n;
 }
 
