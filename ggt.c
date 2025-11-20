@@ -13,8 +13,20 @@ int ggt(int n1,int n2)
     return n1;
 }
 
+int ggtrekursive(int a, int b)
+{
+    if( a % b == 0)
+    {
+        return b; 
+    } 
+    int teilergebnis = a / b;
+    int rest = a - (teilergebnis * b);
+    return ggtrekursive(b, rest);
+}
+
 int main(void)
 {
     printf("%d\n", ggt(25,10));
+    printf("GGT Rekursive: %d\n", ggtrekursive(24, 9));
     return 0;
 }
