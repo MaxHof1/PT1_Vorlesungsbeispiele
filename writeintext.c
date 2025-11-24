@@ -1,18 +1,10 @@
 #include<stdio.h>
 
-int main (void)
-{
+int main (void){
     FILE *out = fopen("test.txt", "w");
-
-    if(out == NULL)
-    return 1;
-
-
-
-    const float radius = 3;
-    const float pi = 3.14595;
-    float flaeche = pi * (radius * radius);
-    fprintf(out,"Der Flächeninhalt beträgt %.2f", flaeche);
+    if(out == NULL) return 1;
+    const float radius = 3, pi = 3.14595;
+    fprintf(out,"Der Flächeninhalt beträgt %.2f", pi * (radius * radius));
     fclose(out);
     return 0;
 }
